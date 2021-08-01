@@ -11,18 +11,18 @@
             margin: 0;
             padding: 0;
             border: 0;
-            height: calc( var(--vh) * 100 );
-            background-color: #FF6;
-            color: #3CC;
-            font-size: 9vw;
-            font-weight: bold;
+            height: var(--vh);
+            line-height: var(--vh);
+            font-size: 10vw;
             font-family: sans-serif;
-            line-height: calc( var(--vh) * 100 );
+            font-weight: bold;
+            color: #3CC;
+            background-color: #FF6;
             text-align: center;
         }
     </style>
     <script>
-        const setVh = () => document.documentElement.style.setProperty( '--vh', window.innerHeight/100 + 'px');
+        const setVh = () => document.documentElement.style.setProperty( '--vh', window.innerHeight + 'px');
         window.addEventListener('load', setVh);
         window.addEventListener('resize', setVh);
         </script>
