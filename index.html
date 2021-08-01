@@ -11,15 +11,21 @@
             margin: 0;
             padding: 0;
             border: 0;
+            height: calc( var(--vh) * 100 );
             background-color: #FF6;
             color: #3CC;
             font-size: 9vw;
             font-weight: bold;
             font-family: sans-serif;
-            line-height: 100vh;
+            line-height: calc( var(--vh) * 100 );
             text-align: center;
         }
     </style>
+    <script>
+        const setVh = () => document.documentElement.style.setProperty( '--vh', window.innerHeight/100 + 'px');
+        window.addEventListener('load', setVh);
+        window.addEventListener('resize', setVh);
+        </script>
 </head>
 <body>
     actionpterygii
